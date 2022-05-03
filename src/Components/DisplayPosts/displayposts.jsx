@@ -5,17 +5,19 @@ const DisplayPosts = (props) => {
         <table>
             <thead>
                 <tr>
-                    <th>User's Name</th>
+                    <th>UserName</th>
                     <th>Body</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
-                {props.map((post, index) => {
+                {props.parentPosts.map((post, index) => {
                     return(
                         <tr>
                             <td>{index + 1}</td>
-                            <td>{post.name}</td>
+                            <td>{post.username}</td>
                             <td>{post.body}</td>
+                            <td>{post.status}</td>
                         </tr>
                     );
 
