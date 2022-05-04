@@ -16,11 +16,11 @@ const CreatePost = (props) => {
     }
     return ( 
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className="form-group">
                 <label>Name</label>
                 <input type="text" value={name} onChange={(event) => setName(event.target.value)}/>
             </div>
-            <div>
+            <div className="form-group">
                 <label>Post</label>
                 <input type="text" value={body} onChange={(event) => setBody(event.target.value)} />
             </div>

@@ -3,3 +3,15 @@
     border-style: solid;
     border-color: black;
 }
+
+.inactive {
+    background-color: grey;
+}
+
+.liked {
+    background-color: green;
+}
+
+.disliked {
+    background-color: red;
+}

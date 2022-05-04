@@ -7,7 +7,9 @@ const DisplayPosts = (props) => {
         <Fragment>
             {props.parentPost.map((postRecord, index) => {
                 return(
-                    <Post postRecord={postRecord} />
+                     <div className="form-control">
+                         <Post postRecord={postRecord} />
+                     </div>
                 )
                 }
             )}

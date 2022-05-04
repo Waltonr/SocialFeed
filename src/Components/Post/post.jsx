@@ -1,9 +1,21 @@
 import React, { useState } from "react";
+
 const Post = (props) => {
   const { postRecord } = props;
 
-  const [likedButton, setLikedButton] = useState("liked");
-  const [dislikedButton, setDislikedButton] = useState("disliked");
+  const [likedButton, setLikedButton] = useState("inactive");
+  const [dislikedButton, setDislikedButton] = useState("inactive");
+
+  function handleClick() {
+    if(likedButton === "inactive"){
+      setLikedButton("liked")
+      setDislikedButton("inactive")
+    }
+    else if (dislikedButton === "inactive"){
+      setDislikedButton('disliked')
+      setLikedButton("inactive")
+    }
+  }
 
   return (
     <div>
@@ -13,8 +25,8 @@ const Post = (props) => {
             <td>{postRecord.name}</td>
             <td>{postRecord.body}</td>
           </tr>
-          <button onClick={likedButton}></button>
-          <button onClick={dislikedButton}></button>
+          <button className={likedButton} onClick={handleClick}></button>
+          <button className={dislikedButton} onClick={handleClick}></button>
         </tbody>
       </table>
     </div>
