@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CreatePost from "./Components/CreatePost/createpost";
 import DisplayPosts from "./Components/DisplayPosts/displayposts";
 import Post from "./Components/Post/post";
+import "./App.css"
 
 function App() {
 
@@ -13,10 +14,15 @@ function App() {
     setPosts(tempPosts)
   }
   return (
-    <div>
-      <h1>App</h1>
-      <CreatePost addNewPostProperty={addNewPost}/>
-      <DisplayPosts parentPost={posts}/>
+    <div className="container">
+      <div className="row">
+        <div className="border-box">
+          <CreatePost addNewPostProperty={addNewPost}/>
+        </div>
+        <div className="border-box">
+          <DisplayPosts parentPost={posts}/>
+        </div>
+      </div>
     </div>
   );
 }

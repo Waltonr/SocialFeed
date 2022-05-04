@@ -7,9 +7,7 @@ const DisplayPosts = (props) => {
         <Fragment>
             {props.parentPost.map((postRecord, index) => {
                 return(
-                    <table>
-                        <td><Post postRecord={postRecord} /></td>
-                    </table>
+                    <Post postRecord={postRecord} />
                 )
                 }
             )}
