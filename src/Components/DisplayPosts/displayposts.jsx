@@ -1,32 +1,20 @@
-import React from "react";
-
+import React, {Fragment} from "react";
+import Post
+ from "../Post/post";
 const DisplayPosts = (props) => {
+
     return ( 
-        <table>
-            <thead>
-                <tr>
-                    <th>UserName</th>
-                    <th>Body</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                {props.parentPosts.map((post, index) => {
-                    return(
-                        <tr>
-                            <td>{index + 1}</td>
-                            <td>{post.username}</td>
-                            <td>{post.body}</td>
-                            <td>{post.status}</td>
-                        </tr>
-                    );
-
-                
-
-            })};
-            </tbody>
-        </table>
-     );
+        <Fragment>
+            {props.parentPost.map((postRecord, index) => {
+                return(
+                    <table>
+                        <td><Post postRecord={postRecord} /></td>
+                    </table>
+                )
+                }
+            )}
+        </Fragment>
+    );
 }
  
 export default DisplayPosts;

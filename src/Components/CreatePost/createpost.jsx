@@ -11,9 +11,11 @@ const CreatePost = (props) => {
             body: body
         };
         console.log(newPost)
+        props.addNewPostProperty(newPost)
+
     }
     return ( 
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <div>
                 <label>Name</label>
                 <input type="text" value={name} onChange={(event) => setName(event.target.value)}/>
