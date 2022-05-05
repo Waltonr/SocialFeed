@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="container">
       <div className="row">
+        <h3 style={{fontSize: "2em"}}>Social<small className="text-muted">Feed</small></h3>
         <div className="border-box">
           <CreatePost addNewPostProperty={addNewPost}/>
         </div>

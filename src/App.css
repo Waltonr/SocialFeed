@@ -2,6 +2,7 @@
     border: 1px;
     border-style: solid;
     border-color: black;
+    margin: 25px;
 }
 
 .inactive {
@@ -14,4 +15,8 @@
 
 .disliked {
     background-color: red;
+}
+
+.box {
+    width: 100px;
 }

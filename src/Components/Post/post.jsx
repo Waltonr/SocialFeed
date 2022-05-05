@@ -19,14 +19,16 @@ const Post = (props) => {
 
   return (
     <div>
-      <table>
+      <table striped>
         <tbody>
           <tr>
             <td>{postRecord.name}</td>
             <td>{postRecord.body}</td>
           </tr>
-          <button className={likedButton} onClick={handleClick}></button>
-          <button className={dislikedButton} onClick={handleClick}></button>
+          <div>
+            <button className={likedButton} onClick={handleClick}></button>
+            <button className={dislikedButton} onClick={handleClick}></button>
+          </div>
         </tbody>
       </table>
     </div>
